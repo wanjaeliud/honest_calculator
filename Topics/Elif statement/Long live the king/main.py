@@ -1,25 +1,9 @@
-three = [(1, 1), (1, 8), (8, 1), (8, 8)]
-five = []
+king_column = int(input())
+king_row = int(input())
 
-
-def append_to_five(j):
-    for i in range(2, 8):
-        five.append((i, j))
-        five.append((j, i))
-
-
-append_to_five(1)
-append_to_five(8)
-
-print(five)
-
-vector = (int(input()), int(input()))
-
-print(vector)
-
-if vector in three:
-    print('3')
-elif vector in five:
-    print('5')
+if king_column in [1, 8] and king_row in [1, 8]:
+    print("3")
+elif king_column in [1, 8] and king_row not in [1, 8] or king_column not in [1, 8] and king_row in [1, 8]:
+    print("5")
 else:
-    print('8')
+    print("8")
