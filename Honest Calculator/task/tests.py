@@ -1,4 +1,4 @@
-from hstest import *
+from hstest import StageTest, CheckResult, WrongAnswer, dynamic_test, TestedProgram
 
 msg = ["Enter an equation",
        "Do you even know what numbers are? Stay focused!",
