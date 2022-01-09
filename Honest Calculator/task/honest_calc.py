@@ -3,7 +3,8 @@ messages = [
     "Enter an equation",
     "Do you even know what numbers are? Stay focused!",
     "Yes ... an interesting math operation. You've slept through all "
-    "classes, haven't you?"
+    "classes, haven't you?",
+    "Yeah... division by zero. Smart move..."
 ]
 operation = {"+", "-", "*", "/"}
 while True:
@@ -21,5 +22,19 @@ while True:
     if oper not in operation:
         print(messages[2])
         continue
-    else:
-        break
+
+    if oper == '+':
+        result = x + y
+    elif oper == '-':
+        result = x - y
+    elif oper == '*':
+        result = x * y
+    elif oper == '/':
+        try:
+            result = x / y
+        except ZeroDivisionError:
+            print(messages[3])
+            continue
+
+    print(float(result))
+    break
